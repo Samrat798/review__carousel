@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+  font-optical-sizing: auto;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  line-height: 1.6;
+  padding: 3rem;
+}
+
+.main {
+  text-align: center;
+}
+
+.main__heading {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.container {
+  background-color: #e6e6e6;
+  width: 60%;
+  padding: 2rem 2.5rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1rem 10rem rgba(0, 0, 0, 0.4);
+}
+
+.img__container {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+.user__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+}
+
+.img__container::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f10e';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transform: translateY(25%);
+  background-color: #07bee2;
+  color: #fff;
+}
+
+.img__container::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: #07bee2;
+  position: absolute;
+  top: -0.25rem;
+  right: -0.5rem;
+  border-radius: 50%;
+  border-radius: 50%;
+  z-index: -190;
+}
+.user__name {
+  font-size: 2.5rem;
+  color: #07bee2;
+}
+
+.user__job {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #036b80;
+}
+
+p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.4rem;
+}
+
+.btn {
+  color: #07bee2;
+  font-size: 1.25rem;
+  background: transparent;
+  border: transparent;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  color: #036b80;
+}
+
+.reset-btn {
+  padding: 0.4rem 1rem;
+  margin-top: -1rem;
+  border: none;
+  background-color: #07bee2;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.reset-btn:hover {
+  background-color: #036b80;
+}
