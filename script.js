@@ -58,3 +58,42 @@ const userDesc = document.querySelector('.user__desc');
 const prevBtn = document.querySelector('.prev-btn');
 const resetBtn = document.querySelector('.reset-btn');
 const nextBtn = document.querySelector('.next-btn');
+
+let currItem = 0;
+
+window.addEventListener('DOMContentLoaded', function () {
+  const item = reviews[currItem];
+  userImg.src = item.img;
+  userName.textContent = item.name;
+  userJob.textContent = item.job;
+  userDesc.textContent = item.text;
+});
+
+function showPerson(person) {
+  const item = reviews[person];
+  userImg.src = item.img;
+  userName.textContent = item.name;
+  userJob.textContent = item.job;
+  userDesc.textContent = item.text;
+}
+
+nextBtn.addEventListener('click', function () {
+  currItem++;
+  if (currItem > reviews.length - 1) {
+    currItem = 0;
+  }
+  showPerson(currItem);
+});
+
+prevBtn.addEventListener('click', function () {
+  currItem--;
+  if (currItem < 0) {
+    currItem = reviews.length - 1;
+  }
+  showPerson(currItem);
+});
+
+resetBtn.addEventListener('click', function () {
+  currItem = Math.floor(Math.random() * reviews.length);
+  showPerson(currItem);
+});
